@@ -12,7 +12,8 @@ var oddNumberCount;
 /**
  * 
  * @param {number} inputNumber 
- * @returns {string}
+ * @returns {boolean} 
+ * @description Function which returns True if the inputNumber is prime else it returns false . Time complexity : O(sqrt(inputNumber))
  */
 
 // This function checks if a number is prime.
@@ -40,9 +41,9 @@ function isPrimeNumber(inputNumber) {
 
 /**
  * 
- * @param {string} generatedString 
- * @param {number} maxRange 
- * @returns void
+ * @param {string} generatedString - the string which is currently building by appending digits
+ * @param {number} maxRange - the maximum range till which the string should be built.
+ * @returns {void}
  */
 
 // This function generates all the odd numbers from 1 to the maximum range.
@@ -102,8 +103,9 @@ function generateNumbers(generatedString, maxRange) {
 
 /**
  * 
- * @param {number} maxLimit 
- * @returns number
+ * @param {number} maxLimit - the maximum range till which the string should be built.
+ * @returns {number} - count of the numbers satisfying the conditions
+ * @description Function to call the generator function by initailizing the string
  */
 
 // This function counts the number of odd numbers from 1 to the maximum limit.
@@ -129,7 +131,8 @@ function countOddNumbers(maxLimit) {
 /**
  * 
  * @param {string} inputString 
- * @returns boolean 
+ * @returns {boolean} - result whether the condition is met or not
+ * @description - to check whether enetered number is a perfect exponetial of 10
  */
 
 //function to cheackwhether the number is a power of 10
@@ -154,8 +157,9 @@ function validateNumber(inputString) {
 // This function generates the result of the input string.
 /**
  * 
- * @param {string} inputString 
- * @returns void
+ * @param {string} inputString - input received from the user
+ * @returns {void}
+ * @description - Function that initiates the program flow only after validating the input
  */
 function generateResult(inputString) {
   try {
@@ -185,6 +189,12 @@ function generateResult(inputString) {
   var result = countOddNumbers(effectiveStringLength);
   console.log(result);
 }
+
+/**
+ * 
+ * @returns {void}
+ * @description - Main function which runs on all type of inputs
+ */
 
 function main() {
     // differnt types of input in string format
